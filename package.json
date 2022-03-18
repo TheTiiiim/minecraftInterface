@@ -1,6 +1,7 @@
 {
   "name": "minecraftinterface",
   "version": "1.0.0",
+  "type": "module",
   "description": "An interface to display information about a minecraft server.",
   "main": "index.js",
   "scripts": {
