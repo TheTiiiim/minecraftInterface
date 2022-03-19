@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import { setOnMessage } from './logParser.js';
+import { listPlayers } from './mcQuery.js';
 import { Client, Intents } from 'discord.js';
 
 const prefix = '!';
@@ -23,6 +24,10 @@ client.on('messageCreate', async (message) => {
 
     if (command === 'ping') {
         message.channel.send('pong!');
+    }
+
+    if (command === 'list') {
+        message.channel.send(await listPlayers());
     }
 
 });
